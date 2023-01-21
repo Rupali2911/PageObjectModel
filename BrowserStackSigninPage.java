@@ -22,11 +22,15 @@ public class BrowserStackSigninPage {
 			@FindBy(xpath = "//input[@id='user_submit']")
 			WebElement LoginBtn;
 			
+
+			@FindBy(xpath ="//a[text()='Sign in with Google']")
+			WebElement SignInWithGoogle;
 			@FindBy(xpath = "(//a[text()='Sign up'])[1]")
 			WebElement SignUP;
 			
 			@FindBy(xpath = "(//a[text()='Forgot password?'])[1]")
 			WebElement ForgotPassword;
+
 			
 // Constructor
 			public BrowserStackSigninPage(WebDriver driver) {
@@ -40,6 +44,10 @@ public class BrowserStackSigninPage {
 			public void enterUserPassword(String userpassword) {
 				UserPassword.sendKeys(userpassword);
 			}
+
+			public void SignInWithGoogle() {
+				SignInWithGoogle.click();
+
 			public void ClickonSignUP() {
 				SignUP.click();
 			}
